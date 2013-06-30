@@ -1,0 +1,61 @@
+---
+layout: default
+title: Ⓒ Ⓞ Ⓓ Ⓔ Ⓑ Ⓐ Ⓢ Ⓢ
+---
+
+<div id="talent">
+  <h2>DJ</h2>
+  <ul>
+    <li>
+      <a href="https://mixcloud.com/thedaniel">the daniel</a>
+    </li>
+    <li>
+      <a href="https://soundcloud.com/robsanheim">rob sanheim</a>
+    </li>
+    <li>
+      <a href="http://www.mixcloud.com/VxJasonxV/">jason salaz</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/technoweenie">the god damn technoweenie</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/holman">zach holman</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/atmos">corey donohoe</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/defunkt">defunkt</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/newmerator">newmerator</a>
+    </li>
+  </ul>
+
+  <h2>VJ</h2>
+  <ul>
+    <li>
+      <a href="https://twitter.com/dreww">dreww</a>
+    </li>
+  </ul>
+
+  <h2>PRD</h2>
+  <ul>
+    <li>
+      <a href="https://soundcloud.com/therationale">rationale</a>
+    </li>
+    <li>
+      <a href="https://soundcloud.com/nakajima">nakajima</a>
+    </li>
+  </ul>
+
+</div>
+
+<div id="home">
+  <h1>MIXES</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
