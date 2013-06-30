@@ -16,16 +16,16 @@ html, body {
 
 body {
   background-color: #333;
+  background: url(/img/stars.png);
+  background-attachment:fixed;
   color: #999;
-  font: 32px 'HelveticaNeueLT-MediumCond', Helvetica, Arial, sans-serif;
+  font: 32px Lato, Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: white;
+  text-transform: uppercase;
 }
-
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
 
 a         { color: #00a; }
 a:hover   { color: #000; }
@@ -73,6 +73,11 @@ ul.posts span {
 
 .site {
   padding: 12px;
+  min-height: 1600px;
+}
+
+.site .header {
+  margin-bottom: 1em;
 }
 
 .site .header h1 a {
@@ -104,8 +109,13 @@ h1.title {
 
 #talent {
   float: left;
-  width: 30%;
-  min-width: 300px;
+  width: 20%;
+  min-width: 160px;
+  margin-right: 24px;
+}
+
+#talent h2 {
+  background-color: rgba(84, 84, 138, 0.5);
 }
 
 #talent ul {
@@ -119,7 +129,6 @@ h1.title {
 
 #home {
   float: left;
-  width: 500px;
 }
 
 /*****************************************************************************/
@@ -128,34 +137,25 @@ h1.title {
 /*
 /*****************************************************************************/
 
-/* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
+.posts .post {
+  width: 600px;
+  font-size: 80%;
+  line-height: 100%;
+  margin: 6px;
+  padding: 6px;
 }
 
-.post ul, .post ol {
-  margin-left: 1.35em;
+.posts .post p {
+  margin-top: 0px;
+  margin-bottom: 16px;
 }
 
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
+.posts li {
+  background-color: rgba(84, 84, 138, 0.5);
+  padding: 32px;
 }
 
-.post pre code {
-  border: none;
-}
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-}
-
-.post pre.terminal code {
-  background-color: #333;
+.post {
+  margin: 24px;
+  padding: 12px;
 }

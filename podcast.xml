@@ -1,0 +1,75 @@
+---
+layout: nil
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+
+<channel>
+
+<title>CODE BASS PODCAST</title>
+
+<link>http://www.code-bass.com/</link>
+
+<language>en</language>
+
+<copyright>&#xA9; 2013 the code bass crew</copyright>
+
+<itunes:subtitle>beats and bass from the people that make the internet</itunes:subtitle>
+
+<itunes:author>code bass</itunes:author>
+
+<itunes:keywords>dj,techno,techhouse,electro,electrohouse,house,housemusic,radio,codebass,github</itunes:keywords>
+
+<itunes:summary>beats and bass from the people that make the internet</itunes:summary>
+
+<description>beats and bass from the people that make the internet</description>
+
+<itunes:owner>
+
+  <itunes:email>danielwh@gmail.com</itunes:email>
+
+</itunes:owner>
+
+<itunes:image href="https://f.cloud.github.com/assets/1476/726979/1f7c6626-e14e-11e2-808f-ab9e857ab7ac.jpg" />
+
+<itunes:category text="Music" />
+
+ {% for post in site.posts limit:10 %}
+
+ <item>
+
+ <title>{{ post.title }}</title>
+
+ <itunes:author>code bass</itunes:author>
+
+ <itunes:subtitle>code bass: {{ post.title }}</itunes:subtitle>
+
+ <itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
+{% if post.image %}
+  <itunes:image href="{{post.image}}" />
+{% else %}
+  <itunes:image href="https://f.cloud.github.com/assets/1476/726979/1f7c6626-e14e-11e2-808f-ab9e857ab7ac.jpg" />
+{% endif %}
+
+{% if post.contenttype %}
+ <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/{{ post.contenttype }}" />
+{% else %}
+  <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/x-mpeg" />
+{% endif %}
+ <guid>{{ post.link }}</guid>
+
+ <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S" }} GMT</pubDate>
+
+ <itunes:duration>{{ post.duration }}</itunes:duration>
+
+ <itunes:keywords>dj,techno,techhouse,electro,electrohouse,house,housemusic,radio,codebass,github</itunes:keywords>
+
+ </item>
+
+ {% endfor %}
+
+</channel>
+
+</rss>

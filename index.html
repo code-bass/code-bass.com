@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ⓒ Ⓞ Ⓓ Ⓔ Ⓑ Ⓐ Ⓢ Ⓢ
+title: code bass
 ---
 
 <div id="talent">
@@ -16,7 +16,7 @@ title: Ⓒ Ⓞ Ⓓ Ⓔ Ⓑ Ⓐ Ⓢ Ⓢ
       <a href="http://www.mixcloud.com/VxJasonxV/">jason salaz</a>
     </li>
     <li>
-      <a href="https://twitter.com/technoweenie">the god damn technoweenie</a>
+      <a href="https://twitter.com/technoweenie">technoweenie</a>
     </li>
     <li>
       <a href="https://twitter.com/holman">zach holman</a>
@@ -49,13 +49,22 @@ title: Ⓒ Ⓞ Ⓓ Ⓔ Ⓑ Ⓐ Ⓢ Ⓢ
     </li>
   </ul>
 
+  <h2>CNTCT</h2>
+  <ul>
+    <li><a href="mailto:contact@code-bass.com">contact@code-bass.com</a></li>
+  </ul>
+
 </div>
 
 <div id="home">
-  <h1>MIXES</h1>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>
+        <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+        <div class="post">
+          {{ post.content }}
+        </div>
+      </li>
     {% endfor %}
   </ul>
 </div>
